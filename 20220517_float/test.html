@@ -4,43 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>가비아글로벌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <style>
+        /* reset  */
         *{margin: 0; padding: 0;}
         li{list-style: none;}
+        .clearfix:after{content:"";display:block;clear:both;}
+        a:link{color: #333; text-decoration: none;}
+        a:visited{color: #333;}
+        a:hover{color: #333;}
 
-        div.headerWrap{ width: 1000px; margin: 0 auto; background-color: blue;}
-        div.headerWrap:after{content:"";display:block;clear: both;}
-        div.headerWrap>h1{background-color: green; width: 200px; line-height: 100px;text-align: center; margin: 0 auto;}
+        body{font-family: 'Noto Sans KR', sans-serif; }
 
-        div.headerWrap>nav.navbar{
-            width: 700px; 
-            background-color: pink;
+        /* header  */
+        .headerWrap{width: 1440px;margin: 0 auto;}
+        .headerWrap>h1{width: 168px; height: 60px;
+        line-height: 60px; float: left;}
+        .navbar{width: 540px;float: right;}
+        .navbar>ul>li{float: left;width: 25%;}
+        .nabar>ul>li>a{
+            display: block; line-height: 60px; 여기부터
         }
-        div.headerWrap>nav.navbar>ul>li{
-            float: left; width: 20%; text-align: center; line-height: 100px;
-        }
-
-
-    
-
-
 
     </style>
 </head>
 <body>
-    <div class="headerWrap">
-        <h1>LOGO</h1>
+    <header class="headerWrap clearfix">
+        <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
         <nav class="navbar">
-            <ul class="menu">
-                <li>menu1</li>
-                <li>menu2</li>
-                <li>menu3</li>
-                <li>menu4</li>
-                <li>menu5</li>
+            <ul class="clearfix">
+                <li><a href="#">아마존입점</a></li>
+                <li><a href="#">알리바바입점</a></li>
+                <li><a href="#">쇼핑몰제작</a></li>
+                <li><a href="#">국내몰운영</a></li>
             </ul>
+
         </nav>
-        <div class="visual"></div>
-    </div>
+    </header>
+    
 </body>
 </html>

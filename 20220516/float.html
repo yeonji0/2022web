@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+
+        div.headerWrap{
+            width: 1200px;margin: 0 auto;
+            /* background-color: skyblue; */
+        }
+        div.headerWrap:after{content:"";display: block;clear: both;}
+
+        div.headerWrap>h1{
+            width: 200px;
+            /* background-color: #f00; */
+            float: left;
+            height: 50px;
+        }
+        div.headerWrap>div.menu{
+            width:800px;
+            float: right;
+            /* background-color: #0ff; */
+        }
+        div.headerWrap>div.menu>ul>li{
+            float:left;height: 50px;width: 25%;line-height:50px;
+            text-align: center;
+        }
+        div.headerWrap>div.menu>ul:after{content:"";display: block;clear: both;}
+
+
+        .visual{
+            height: 500px;background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="headerWrap">
+        <h1>logo</h1>
+        <div class="menu">
+            <!-- ul>li*4>{menu$} -->
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </div>
+    </div>
+    <div class="visual"></div>
+</body>
+</html>

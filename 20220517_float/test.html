@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+
+        div.headerWrap{ width: 1000px; margin: 0 auto; background-color: blue;}
+        div.headerWrap:after{content:"";display:block;clear: both;}
+        div.headerWrap>h1{background-color: green; width: 200px; line-height: 100px;text-align: center; margin: 0 auto;}
+
+        div.headerWrap>nav.navbar{
+            width: 700px; 
+            background-color: pink;
+        }
+        div.headerWrap>nav.navbar>ul>li{
+            float: left; width: 20%; text-align: center; line-height: 100px;
+        }
+
+
+    
+
+
+
+    </style>
+</head>
+<body>
+    <div class="headerWrap">
+        <h1>LOGO</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
+        </nav>
+        <div class="visual"></div>
+    </div>
+</body>
+</html>

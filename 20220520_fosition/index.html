@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing:border-box;}
+        li{list-style: none;}
+        .clearfix:after{content:"";display: block;clear: both;}
+
+        body{background-image: url(../images/bg_grid.gif);}
+
+        div{width: 100px;height: 100px;}
+        div.box1{background-color: skyblue;}
+        div.box2{
+            background-color: red;
+            position: relative;left: 50px;top: 50px;
+          
+        }
+        div.box3{
+            background-color: pink;
+        }
+        div.box4{   
+            background-color: blue;
+        }
+        /* position  */
+        /* 좌표가능 top/right/bottom/left */
+        /* 레이어의 기능부여 */
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

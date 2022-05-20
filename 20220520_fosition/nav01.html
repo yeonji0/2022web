@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        .clearfix:after{content:"";display: block;clear: both;}
+        a:link,a:visited{color:#333;text-decoration: none;}
+
+        
+
+
+        /* header  */
+        #headerWrap{
+            width: 1000px;height: 150px;margin: 0 auto;
+            padding:20px;position: relative;
+            border-bottom: 1px solid #333;
+            margin-bottom: 10px;
+        }
+        #headerWrap h1{background-color: #fff;width: 150px;height: 110px;}
+        #headerWrap h1 a{background-color: pink;display: block;line-height: 110px;text-align: center;}
+        .util{position: absolute;right: 20px;top: 20px;}
+        .util>ul>li{float: left;}
+        .util>ul>li>a{display: block;padding: 10px 15px;font-size: 14px;}
+
+        
+        .navbar{position: absolute;right: 20px;bottom: 20px;}
+        .navbar>ul>li{float: left;}
+        /* .navbar>ul>li:hover{background-color: #f00;}
+        .navbar>ul>li:hover a{color:white} */
+
+        .navbar>ul>li>a{
+            display: block;padding:10px 20px;
+            font-size: 18px;
+        }
+        .navbar>ul>li>a:hover{background-color: #00f;color:white}
+
+
+        /* visual */
+        .visual{background-color: #ff0;}
+        .visual img{display: block;margin:0 auto;width: 100%;}
+        .visual .txtWrap{
+            position: absolute;
+            left:calc( 50% - 479px);top:200px
+        }
+        .visual .txtWrap h2{margin-bottom: 10px;}
+        .visual .txtWrap p{margin-bottom: 20px;}
+        .visual .txtWrap .btn{
+            display: inline-block;padding:10px 40px;
+            /* background-color: #fff; */
+            border-radius:21px;
+            border: 1px solid #fff;
+            color:white;transition:0.3s
+        }
+        .visual .txtWrap .btn:hover{
+            background-color: #fff;
+            color:#000;
+        }
+
+        /* bxslider / 이미지,jquery,bxslider.js,bxslider.css*/
+
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: 0 none;
+            margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
+        }
+
+        .section{height: 300px;background-color:pink;}
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".slide").bxSlider();
+        })
+    </script>
+</head>
+<body>
+    <header id="headerWrap">
+        <h1><a href="#">LOGO</a></h1>
+        <div class="util">
+            <ul class="clearfix">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MY PAGE</a></li>
+                <li><a href="#">SITE MAP</a></li>
+            </ul>
+        </div>
+        <nav class="navbar">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="visual">
+
+        <ul class="slide">
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, est.</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+                <img src="../images/pc01.jpg" alt="">
+            </li>
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, est.</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+                <img src="../images/pc02.jpg" alt=""></li>
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, est.</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+                <img src="../images/pc03.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="section"></div>
+</body>
+</html>

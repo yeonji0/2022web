@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-image: url(../images/bg_grid.gif);}
+        /* reset  */
+        *{margin:0; padding:0;box-sizing:border-box}
+        li{list-style:none;}
+        .clearfix:after{content:"";display:block;clear:both;}
+
+        ul{width: 400px;}
+        ul>li{
+            float:left;width: 100px;height: 100px; 
+            border-right:1px solid #f00; padding: 10px;
+        }
+        ul>li:nth-child(2n)
+        {background-color: rgba(0,255,255,1);opacity:0.5;}
+        ul>li:first-child{border-left: 1px solid #f00; }
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

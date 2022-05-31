@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <style>
+        .container{width: 1280px;margin: 0 auto;}
+        .visual {position: relative;}
+        .visual .txtWrap{
+            position: absolute; width: 1280px;
+            left: 50%; margin-left: -640px; 
+            color: white; height: 100%; 
+           
+        }
+
+        .visual .txtWrap .txt{position: absolute; top: 3
+            0%;}
+        .visual .txtWrap h3{font-size: 80px;}
+        .visual .txtWrap p{font-size: 24px;}
+
+        .visual li>img{width: 100%;}
+
+        .next,
+        .prev {position: absolute; top: 50%; margin-top: -50px; cursor: pointer;}
+
+        .next{right: 0;}
+
+
+
+        .box{width: 500px;margin: 0 auto;}
+        .box .slide2 img {width: 100%;}
+
+        .bx-wrapper {
+        -moz-box-shadow: 0 0 0 #ccc;
+         -webkit-box-shadow: 0 0 0 #ccc;
+         box-shadow: 0 0 0 #ccc;
+         border: none; margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager {
+         bottom: 30px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, 
+        .bx-wrapper .bx-pager.bx-default-pager a.active, 
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+         background:red;}
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            var slide = $(".slide1").bxSlider({
+                // auto:true, 
+                // mode:'vertical',
+                controls:false
+            });
+
+            $(".next").click(function(){
+                slide.goToNextSlide();
+            });
+            $(".prev").click(function(){
+                slide.goToPrevSlide();
+            });
+
+
+            $(".slide2").bxSlider();
+
+
+        })
+    </script>
+
+</head>
+<body>
+    <div class="visual">
+        <ul class="slide1">
+            <li>
+                <div class="txtWrap">    <!-- 1280 poa -->
+                    <div class="txt">
+                        <h3>견학프로그램</h3>
+                        <p>나의 게임 산업 탐방기</p>
+                    </div>
+                </div>
+                <img src="../images/pc01.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/pc02.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/pc03.jpg" alt="">
+            </li>
+        </ul>
+        <div class="next">
+            <img src="../images/next1.png" alt="">
+        </div>
+        <div class="prev">
+            <img src="../images/next2.png" alt="">
+        </div>
+    </div>
+    <div class="box">
+    <ul class="slide2">
+        <li>
+            <img src="../images/pc01.jpg" alt="">
+        </li>
+        <li>
+            <img src="../images/pc02.jpg" alt="">
+        </li>
+        <li>
+            <img src="../images/pc03.jpg" alt="">
+        </li>
+    </ul>
+    </div>
+    
+</body>
+</html>

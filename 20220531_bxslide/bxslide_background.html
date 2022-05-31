@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <style>
+        body{background-color: skyblue;}
+        .container{width: 1280px;margin: 0 auto}
+        .visual{position: relative;height: 100vh;min-height:800px}
+        .visual .txtWrap{
+            position: absolute;width: 1280px;
+            left:50%;margin-left: -640px;
+            color:white;
+            height: 100%;
+        }
+        .visual .txtWrap .txt{position: absolute;top: 30%;}
+        .visual .txtWrap h3{font-size: 80px ;}
+        .visual .txtWrap p{font-size: 24px;margin-bottom: 15px;}
+        .visual .txtWrap a{
+            display: inline-block;background-color:white;
+            padding: 10px 20px;border-radius: 10px;
+        }
+        .visual .slideItem{
+            height:100vh;min-height:800px;
+            background-color:orange;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .next,
+        .prev{position: absolute;top: 50%;margin-top: -50px;cursor:pointer}
+
+        .next{right: 0;}
+
+        .visual li>img{width: 100%;}
+
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: 0 none;
+            margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, 
+        .bx-wrapper .bx-pager.bx-default-pager a.active, 
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: #f00;
+        }
+
+        .wrap{
+            background-color:white;position: absolute;
+            z-index: 1;width: 100%;
+        }
+        .wrap li{float: left;width: calc( 100% / 5 );}
+        .wrap li a{display: block;line-height: 50px;text-align: center;}
+
+
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            var slide = $(".slide1").bxSlider({
+                controls:false
+            });
+
+            $(".next").click(function(){
+                slide.goToNextSlide();
+            });
+
+            $(".prev").click(function(){
+                slide.goToPrevSlide();
+            });
+
+
+
+
+            $(".slide2").bxSlider();
+
+        })
+
+        // var data = [1,1,1,1,1,1]
+        // var data1 = {eng:100,math:50}
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="container">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="visual">
+        <ul class="slide1">
+            <li style="background-image:url(../images/pc01.jpg)" class="slideItem">
+                <div class="txtWrap"><!-- 1280 poa -->
+                    <div class="txt">
+                        <h3>견학프로그램1</h3>
+                        <p>나의 게임 산업 탐방기</p>
+                        <a href="#" class="btn">더보기</a>
+                    </div>
+                </div>
+                <!-- <img src="../images/pc01.jpg" alt=""> -->
+            </li>
+            <li style="background-image:url(../images/pc02.jpg)" class="slideItem">
+                <div class="txtWrap"><!-- 1280 poa -->
+                    <div class="txt">
+                        <h3>견학프로그램2</h3>
+                        <p>나의 게임 산업 탐방기</p>
+                        <a href="#" class="btn">더보기</a>
+                    </div>
+                </div>
+                <!-- <img src="../images/pc02.jpg" alt=""> -->
+            </li>
+            <li style="background-image:url(../images/pc03.jpg)" class="slideItem">
+                <div class="txtWrap"><!-- 1280 poa -->
+                    <div class="txt">
+                        <h3>견학프로그램3</h3>
+                        <p>나의 게임 산업 탐방기</p>
+                        <a href="#" class="btn">더보기</a>
+                    </div>
+                </div>
+                <!-- <img src="../images/pc03.jpg" alt=""> -->
+            </li>
+        </ul>
+        <div class="next">
+            <img src="../images/next.png" alt="">
+        </div>
+        <div class="prev">
+            <img src="../images/prev.png" alt="">
+        </div>
+    </div>
+
+    <div style="height:1000px;background-color:darkgray;"></div>
+
+
+    
+
+
+
+
+</body>
+</html>

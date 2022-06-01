@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var slide = $(".slide").bxSlider({
+                controls:false,
+                pagerCustom:".slideTap",
+                mode:"vertical"
+                
+            });
+
+            $("btnNext").click(function(){
+                slide.goToNextSlide()
+            });
+            $("btnPrev").click(function(){
+                slide.goToPrevSlide()
+            });
+        });
+
+    
+        
+    </script>
+</head>
+<body>
+    <div class="visual">
+        <ul class="slide">
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nam.</p>
+                    <a href="#" class="btn">MORE</a>
+                </div>
+                <img src="../images/bx.jpg" alt="">
+            </li>
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nam.</p>
+                    <a href="#" class="btn">MORE</a>
+                </div>
+                <img src="../images/bx.jpg" alt="">
+            </li>
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nam.</p>
+                    <a href="#" class="btn">MORE</a>
+                </div>
+                <img src="../images/bx.jpg" alt="">
+            </li>
+        </ul>
+        <img src="../images/next1.png" alt="" class="btnNext">
+        <img src="../images/next2.png" alt="" class="btnPrev">
+        <div class="slideTap">
+            <a href="#" data-slide-index="0">menu1</a>
+            <a href="#" data-slide-index="1">menu2</a>
+            <a href="#" data-slide-index="2">menu3</a>
+        </div>
+    </div>
+</body>
+</html>

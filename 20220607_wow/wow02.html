@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <style>
+        body{height: 300vh;}
+        .box{
+            position: absolute; top:150vh;
+            width: 1000px;height: 200px; 
+            left: 50%; transform: translateX(-50%);
+            display: flex;
+        }
+        .box1{
+            width: 250px;height: 250px;
+            background-color: #f00;
+            border-radius: 50%;
+        }
+
+        .boxWrap{
+            position: absolute;
+            top: 200vh; width: 1000px;
+            left: 50%; transform: translateX(-50%);
+        }
+        .boxWrap li{float: left; width: calc( ( 1000px - 30px ) / 4 ); margin-right: 10px;}
+        .boxWrap li:last-child{margin-right: 0;}
+        .boxWrap li img{width: 100%; border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1 wow fadeInUp"data-wow-offset="100"></div>
+        <div class="box1 wow slideInLeft"data-wow-offset="100" data-wow-delay="0.4s"></div>
+        <div class="box1 wow fadeInUp"data-wow-offset="100" data-wow-delay="0.8s"></div>
+        <div class="box1 wow slideInRight"data-wow-offset="100" data-wow-delay="1.2s"></div>
+    </div>
+    <div class="boxWrap">
+        <ul class="cleafix">
+            <li class="wow pulse" data-wow-delay="0" data-wow-iteration="infinite" ><img src="../images/testimg.jpg" alt=""></li>
+            <li class="wow fadeInUp" data-wow-delay="0.4s"><img src="../images/testimg.jpg" alt=""></li>
+            <li class="wow fadeInUp" data-wow-delay="0.8s"><img src="../images/testimg.jpg" alt=""></li>
+            <li class="wow fadeInUp" data-wow-delay="1.2s"><img src="../images/testimg.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

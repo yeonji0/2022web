@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* html,body{height: 100%;} */
+        body{display: flex; justify-content: center; align-items: center;
+        height: 100vh;}
+        .boxWrap{
+            width: 400px;height: 400px;background: pink;
+            display: flex;justify-content: center; align-items: center;
+            /* flex-direction: column; */
+        }
+        .boxWrap div{
+            width: 100px;height: 100px;
+            position: absolute;
+            transition: 0.3s;
+            border-radius: 50%;}
+        .boxWrap div:nth-child(1){
+            background: red;
+            }
+        .boxWrap div:nth-child(2){
+            background: blue;
+        }
+        .boxWrap div:nth-child(3){
+            background: green;
+            transition-delay: 0.3s;
+           
+        }
+        .boxWrap:hover div:nth-child(1){
+            transform: translate(-100px,50px);}
+        .boxWrap:hover div:nth-child(3){
+            transform: translate(100px,-50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    
+</body>
+</html>

@@ -13,7 +13,7 @@
     <style>
         /* .submenu{display: none;} */
 
-        .navWrap{width: 1000px;margin: 0 auto; position: relative;z-index: 1;}
+        .navWrap{width: 1000px;margin: 0 auto; position: relative; z-index: 1;}
         .nav>ul>li {
            height: 40px; float: left; width: calc( 100% / 5 );
            background-color: pink;
@@ -35,7 +35,7 @@
 
         .submenu{background-color:#fff; 
             transition: 0.5s; border-radius: 0 0 5px 5px;
-            transform: translateY(15px);
+            transform: translateY(20px);
             opacity: 0;  visibility: hidden;
         }
         .submenu li a{ 
@@ -65,69 +65,70 @@
 <body>
 
     <!-- header/nav/section/aside/article/footer/address -->
+<div class="navWrap">
+    <nav class="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="#">menu1</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">s01_01</a></li>
+                        <li><a href="#">s01_02</a></li>
+                        <li><a href="#">s01_03</a></li>
+                        <li><a href="#">s01_04</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">s02_01</a></li>
+                        <li><a href="#">s02_02</a></li>
+                        <li><a href="#">s02_03</a></li>
+                        <li><a href="#">s02_04</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">s03_01</a></li>
+                        <li><a href="#">s03_02</a></li>
+                        <li><a href="#">s03_03</a></li>
+                        <li><a href="#">s03_04</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">s04_01</a></li>
+                        <li><a href="#">s04_02</a></li>
+                        <li><a href="#">s04_03</a></li>
+                        <li><a href="#">s04_04</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">menu5</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">s05_01</a></li>
+                        <li><a href="#">s05_02</a></li>
+                        <li><a href="#">s05_03</a></li>
+                        <li><a href="#">s05_04</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
 
-    <div class="navWrap">
-        <nav class="nav">
-            <ul class="clearfix">
-                <li>
-                    <a href="#">menu1</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#">s01_01</a></li>
-                            <li><a href="#">s01_02</a></li>
-                            <li><a href="#">s01_03</a></li>
-                            <li><a href="#">s01_04</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">menu2</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#">s02_01</a></li>
-                            <li><a href="#">s02_02</a></li>
-                            <li><a href="#">s02_03</a></li>
-                            <li><a href="#">s02_04</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">menu3</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#">s03_01</a></li>
-                            <li><a href="#">s03_02</a></li>
-                            <li><a href="#">s03_03</a></li>
-                            <li><a href="#">s03_04</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">menu4</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#">s04_01</a></li>
-                            <li><a href="#">s04_02</a></li>
-                            <li><a href="#">s04_03</a></li>
-                            <li><a href="#">s04_04</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">menu5</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#">s05_01</a></li>
-                            <li><a href="#">s05_02</a></li>
-                            <li><a href="#">s05_03</a></li>
-                            <li><a href="#">s05_04</a></li>
-                        </ul>
-                    </div>
-                </li>
 
-            </ul>
-        </nav>
-    </div>
+
     <div class="visual">
         <ul class="slide">
             <li><img src="../images/pc01.jpg" alt=""></li>

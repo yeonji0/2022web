@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .sliderWrap{width: 1000px;margin: 0 auto; height: 500px;}
+        .swiper{width: 100%;height: 100%;}
+        .swiper-slide{
+            align-items: center;
+            display: flex; justify-content: center;background-color: skyblue;}
+        .swiper-slide-active{background: pink;}
+        .swiper h3{transform: translateY(60px);transition: 0.3s; transition-delay: 0.3s; opacity: 0;}
+        .swiper1st.swiper-slide-active h3{transform: translateY(0); opacity: 1;}
+        .swiper1st .img01{position: absolute;left: 30px;}
+        .swiper1st.swiper-slide-active .img01{}
+    </style>
+</head>
+<body>
+    <div class="sliderWrap">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper1st">
+                <h3>dddd</h3>
+                <img src="" alt="" class="img01">
+             </div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <div class="swiperpagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+    </div>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            // slidesPerView: 3,
+            // centeredSlides: true,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+</body>
+</html>

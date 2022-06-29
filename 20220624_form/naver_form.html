@@ -22,7 +22,7 @@
         <div id="content">
             <h2 class="blind">네이버 회원가입</h2>
             <div class="join">
-                <form action="#" method="get">
+                <form action="#" method="post">
                     <fieldset>
                         <legend class="blind">아이디/비밀번호</legend>
                         <p class="field">
@@ -77,9 +77,36 @@
                             <input type="text" id="user-cMail" name="usercMail" class="inp-field w458" placeholder="본인확인 이메일">
                         </p>
                     </fieldset> 
+                    <fieldset>
+                        <legend class="blind">휴대전화인증</legend>
+                        <p class="field confirm clearfix">
+                            <label for="tel1" class="blind">인증번호받기</label>
+                            <select name="tel1" id="tel1" class="tellFirst">
+                                <option value="+032">+031</option>
+                                <option value="+032">+032</option>
+                            </select>
+                            <span class="wall">l</span>
+                            <input type="text" name="cellNum" placeholder="휴대전화번호" class="inp-field w202">
+                            <button type="text" class="btn-click btn-primary">인&nbsp&nbsp증</button>
+                        </p>
+                        <p class="field">
+                            <label for="tel-confirm" class="blind">인증번호확인</label>
+                            <input type="text" id="tel-confirm" name="telConfirm" placeholder="인증번호"class="inp-field w303">
+                            <button type="text" class="btn-click btn-success">확&nbsp&nbsp인</button>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="가입하기" class="btn-submit">
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        let month = '';
+        for(var i=1;i<13;i++){
+            month = month + `<option value="${i}월"> ${i}월 </option>`;            
+        }
+        document.getElementsByClassName("birMonth")[0].innerHTML = month;
+        // document.getElementsByTagName("body")[0].style.background="#000"
+    </script>
 </body>
 </html>

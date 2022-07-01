@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+       
+    </div>
+    <div class="box2">
+      
+    </div>
+    <div class="box3">
+       
+    </div>
+    
+    <script>
+        function gugudan(dan,name){  //function 함수이름(매개변수,매개변수,매개변수){}
+            console.log('ok')
+
+            let text = "";
+            for(let i=2;i<10;i++){
+                // document.write("3 x" + i + "=" + 3*i + "<br>");
+                text += `${dan} x ${i} = ${dan*i} <br>`
+            }
+            document.querySelector(name).innerHTML = text
+        }
+
+        gugudan(3,".box1")
+        gugudan(4,".box2")
+        gugudan(5,".box3")
+
+        // function funcNameCount4dan(){
+        //     console.log('ok')
+
+        //     for(let i=2;i<10;i++){
+        //         document.write(`4 x ${i} = ${4*i} <br>`)
+        //     }
+        // }
+
+        // funcNameCount();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;height: 100px;background: skyblue;
+            transition: .3s; position: absolute; left: -100%;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="styleColor()" class="btn1">변형</button>
+    <button onclick="styleInit()" class="btn2">복귀</button>
+
+    <div class="box"></div>
+    
+    <script>
+        const boxElem = document.querySelector(".box");
+        const btnElem = document.querySelector(".btn1");
+
+        function styleColor(){
+            boxElem.style.width = "200px";
+            boxElem.style.height = "200px";
+            boxElem.style.backgroundColor = "pink";
+            boxElem.style.left = "0";
+        }
+
+        function styleInit(){
+            boxElem.style.width = "100px";
+            boxElem.style.height = "100px";
+            boxElem.style.backgroundColor = "skyblue";
+            boxElem.style.left = "-100%"
+        }
+
+
+    </script>
+</body>
+</html>

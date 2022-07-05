@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">버튼</button>
+    <button onclick="fnc('보끔밥')">버튼</button>
+
+    <div><span class="name">이름</span>님 안냐세여</div>
+    <script>
+        function fnc(name){
+            console.log(name)
+            // document.getElementsByClassName("name")[0].innerHTML = 
+
+            // const nameElm = document.querySelector(".name");
+            // nameElm[0].innerHTML = name;
+            
+            document.querySelector("div span.name").innerHTML = name
+        }
+
+        document.querySelector(".btn1").addEventListener("click",function(){
+            fnc("연찌르");
+        })
+    </script>
+</body>
+</html>

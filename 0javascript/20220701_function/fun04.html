@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        성명 : <span class="name">연지</span>
+        나이 : <span class="age">00</span>살
+        만나이 : <span class="age">00</span>살
+    </div>
+
+    <button onclick="insertName('버튼',20,2)">버튼</button>
+    <button onclick="insertName('버튼',21,2)">버튼</button>
+    <button onclick="insertName('버튼',22,2)">버튼</button>
+    <button onclick="insertName('버튼',23,2)">버튼</button>
+
+    <hr>
+    내 이름은 <span class="myname">졸림</span>입니다.
+    
+    <script>
+        const text1 = "text1";
+        const text2 = "text2";
+
+        print(text1)
+        function print(name){ //name = text1;
+            document.write(name)
+        }
+        print(text2)
+        
+        // 0. function insertName(매개변수,매개변수){} 함수 제작 
+        // 1. 어디에 insert, dom(document object model)조합 => 선택자
+        // 2. 선택자.innerHTMl로 대입
+        
+        function insertName(name,age,m){
+            let ageCount = age - m;
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector(".ageCount").innerHTML = ageCount;
+            document.querySelector(".age").innerHTML = age;
+        }
+
+        //-------------------------------------------------------------------------
+
+        
+        const fncName = function(num1,num2){
+            let add = num1 + num2;
+            
+            return add;
+        }
+        // const view = fncName('연찌르')
+        
+        function fncCount(num1,num2){
+            let minus = num1 - num2;
+            return minus;
+        }
+
+        let view = fncName(80,60)
+        
+        document.querySelector(".myname").innerHTML = view;
+
+    
+    </script>
+</body>
+</html>

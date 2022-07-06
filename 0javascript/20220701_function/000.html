@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    내 나이는 <span class="myage">00</span>입니다.
+
+    <button class="btn1">이동</button>
+    <button>이동</button>
+
+    <div class="box"></div>
+
+    <script>
+        const boxElem = document.querySelector(".box");
+        const btnElem = document.querySelector(".btn1");
+
+        btnElem.addEventListener("click",function(){
+            
+        })
+
+        function moveBox(move,name,color){
+            boxElem.style.marginLeft = "30px";
+        }
+
+
+
+
+        const fncName = function(num1,num2){
+            let add = num1 + num2;
+
+            return add;
+        }
+
+        let view = fncName(10,40)
+
+        document.querySelector(".myage").innerHTML = view;
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

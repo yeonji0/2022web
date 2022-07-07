@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <input type="text" class="inp">
+    <button class="btn">insert</button>
+
+    <ul class="view">
+        
+    </ul>
+
+
+    <script>
+        const arr = [];
+
+        // const inpElem = document.querySelector(".inp");
+        // const btnElem = document.querySelector(".btn");
+        // const viewElem = document.querySelector(".view");
+
+        // btnElem.addEventListener("click",function(){
+
+        //     console.log("viewData = " + inpElem.value);
+        //     arr.push(inpElem.value)
+        //     console.log(arr)
+        //     let text = `<li>${inpElem.value}</li>`;
+        //     // viewElem.innerHTML = text
+
+
+        //     viewElem.append(text)
+        // })
+        
+        // jQuery 
+
+        $(".btn").click(function(){
+            console.log($(".inp").val() )
+            arr.push($('.inp').val())
+            console.log(arr)
+
+            let text = `<li>${$(".inp").val()}</li>`;
+
+            $('.view').prepend(text)
+        })
+
+    </script>
+    
+</body>
+</html>

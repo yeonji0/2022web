@@ -5,46 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../js/jquery-3.1.1.min.js">
+    <style>
+        .toggle{
+            width: 60px;height: 60px;
+            border: 1px solid #000;
+            display: flex; justify-content: center; align-items: center;
+            position: absolute;  z-index: 1;
+        }
+        .toggle div {
+            width: 40px;height: 5px; background: #000;
+            border-radius: 3px;
+            position: absolute;
+        }
+        .toggle .bar1 {transform: translateY(-15px);}
+        .toggle .bar3 {transform: translateY(15px);}
+
+        .toggle.active .bar1{transform: translateY(0) rotate(315deg);}
+        .toggle.active .bar2{opacity: 0;}
+        .toggle.active .bar3{transform: translateY(0) rotate(-315deg);}
+        .toggle.active div{background: ;}
+
+        #box{ width: 500px;height: 500px; background: pink;position: absolute;}
+        #box.view{
+            left: 0;
+        }
+
+    </style>
 </head>
 <body>
-    내 나이는 <span class="myage">00</span>입니다.
+    <div class="toggle">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    
 
-    <button class="btn1">이동</button>
-    <button>이동</button>
-
-    <div class="box"></div>
-
+    <div id="box" class=""></div>
+    
     <script>
-        const boxElem = document.querySelector(".box");
-        const btnElem = document.querySelector(".btn1");
-
-        btnElem.addEventListener("click",function(){
-            
-        })
-
-        function moveBox(move,name,color){
-            boxElem.style.marginLeft = "30px";
-        }
+        const toggleElem = document.querySelector(".toggle");
+        
 
 
-
-
-        const fncName = function(num1,num2){
-            let add = num1 + num2;
-
-            return add;
-        }
-
-        let view = fncName(10,40)
-
-        document.querySelector(".myage").innerHTML = view;
-
-
-
-
-
-
+        toggleElem.
     </script>
+    
 
 </body>
 </html>

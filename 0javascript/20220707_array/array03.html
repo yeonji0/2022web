@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array03</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <input type="text" class="inp" value="">
+    <button class="btn">insert</button>
+
+    <ul class="viewData">
+
+    </ul>
+
+<script>
+    let data = [];
+    const input = document.querySelector(".inp");
+    const btn = document.querySelector(".btn");
+    const viewData = document.querySelector(".viewData");
+
+    btn.addEventListener("click",function(){
+        let value = input.value;
+        console.log(value)
+
+        data.push(vale);
+        input.vale ="";
+
+        listData();
+    })
+
+    function listData(){
+        for(let i=0;i<data.length;i++){
+            text += `<li>${data[i]} <span>del</spasn></li>`
+        }
+        viewData.innerHTML = text;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // $(".btn").click(function(){
+    //     let value = $(".inp").val();
+    //     // console.log(value)
+    //     data.push(value)
+        
+    //     // let text = `<li>${value}</li>`;
+    //     // $('.viewData').append(text)
+
+    //     viewData();
+    // });
+
+    // function viewData(){
+    //     let text = "";
+    //     for(let i=0;i<data.length;i++){
+    //         text += `<li>${data[i]}</li>`;
+    //     }
+    //     $('.viewData').html(text);
+    // }
+</script>
+</body>
+</html>

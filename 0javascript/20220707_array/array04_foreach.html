@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array04</title>
+   
+</head>
+<body>
+    <ul class="loc">
+
+    </ul>
+
+    <script>
+        const kdata = ['서울','부산','청주','대구'];
+        const number = {10,20,30,40,50,60}
+
+        const num = document.querySelector(".num");
+
+        let txt ="";
+        // for(let i=0;i<kdata.length;i++){
+        //     console.log(i)
+        //     txt = txt + `<li>${kdata[i]}</li>`;
+        // }
+        // 배열변수.forEach(function(item,index){})  --> 외워야댐
+
+        kdata.forEach(function(item,index){
+            // console.log(kdata[index]);
+            // console.log(item);
+            // txt += `<li>${item}</li>`;
+            txt += `<li>${kdata[index]}</li>`;
+        })
+
+        kdata.forEach( (item) => {} )
+
+        document.querySelector(".loc").innerHTML = txt;
+        num.innerHTML 
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object02</title>
+   
+</head>
+<body>
+    <div> 영어 <span class="eng">0</span>점</div>
+    <div class="content"></div>
+    <script>
+        const obj = {
+            eng:100,
+            math:80,
+            kor:90
+            levelup:function(){
+                return this.eng + 10
+            }
+        }
+        // const arr=[10,20,30]
+
+        // arr.forEach(function(item,index){
+        //     console.log(item)
+        // })
+
+        // for(let i in obj){
+        //     console.log(obj[i])
+        // }
+
+        document.querySelector(".eng").innerHTML = obj.levelup();
+
+        const viewdata= [
+            {idx:1,title:'졸려',content:"만나서 반",name:"연지",date:"20220713"},         //biewdata[0]
+            {idx:2,title:'졸려',content:"만나서 반",name:"연지",date:"20220713"},         //biewdata[0]
+            {idx:3,title:'졸려',content:"만나서 반",name:"연지",date:"20220713"},         //biewdata[0]
+            {idx:4,title:'졸려',content:"만나서 반",name:"연지",date:"20220713"},         //biewdata[0]
+            {idx:5,title:'졸려',content:"만나서 반",name:"연지",date:"20220713"},         //biewdata[0]
+        ]
+        
+        let txt ="";
+        for(let i=0;i<viewdata.length,i++){
+            console.log(viewdata[i].title)
+            txt += `<ul class="table"><li>${viewdata[i].idx}</li></ul>`;
+        }
+
+        document.querySelector(".content").innerHTML = txt;
+    </script>
+</body>
+</html>

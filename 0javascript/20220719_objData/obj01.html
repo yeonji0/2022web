@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <table class="list">
+        <tr>
+            <td>이름</td>
+            <td>국어</td>
+            <td>영어</td>
+            <td>수학</td>
+            <td>상담내용</td>
+        </tr>
+    </table>
+
+    <script>
+        const obj = {key:"value"}
+        const arr = [
+            {
+                name:"연찌르",
+                subject:{kor:90,eng:100,math:80},
+                etc:"착하고 캐성실"
+            },
+            {
+                name:"방울이",
+                subject:{kor:60,eng:90,math:80},
+                etc:"캐기염"
+            },
+            {
+                name:"길동이",
+                subject:{kor:50,eng:60,math:50},
+                etc:"별로임"
+            },
+            {
+                name:"철수",
+                subject:{kor:50,eng:60,math:50},
+                etc:"착하긴함"
+            }
+        ]
+        
+        let text = "";
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i].name)
+            text += `<tr>
+                        <td>${arr[i].name}</td>
+                        <td>${arr[i].subject.kor}</td>
+                        <td>${arr[i].subject.eng}</td>
+                        <td>${arr[i].subject.math}</td>
+                        <td>${arr[i].etc}</td>
+                    </tr>`
+        }
+        $(".list").append(text)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex03_card</title>
+    <link rel="stylesheet" href="../css/reset.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .container{overflow: hidden; }
+        .card-img{
+            background-color: skyblue;
+            padding-bottom: 60%;
+            background-repeat: no-repeat;
+            background-position: center ;
+            background-size: cover;
+        }
+        .card-img img{width: 0;}
+        .card-txt{background-color: skyblue; padding: 10px;}
+
+        @media screen and (min-width:600px){
+            .cardWrap{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -0.5em;
+                /* justify-content: space-between; */
+            
+            }
+            li.card{
+                width: 50%; padding: 0 0.5em;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .card-txt{flex-grow: 1;}
+            
+        }
+        @media screen and (min-width:850px){
+            li.card{width: calc(100% / 3)}
+        }
+        @media screen and (min-width:1200px){
+            li.card{width: calc(100% / 4)}
+            .container{width: 1200px;margin: 0 auto;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="cardWrap">
+            <li class="card">
+                <div class="card-img" style="background-image:url(../images/img1.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus! amet consectetur adipisicing elit. Vero, natus! amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img2.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img3.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img" style="background-image:url(../images/img1.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img2.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img3.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img" style="background-image:url(../images/img1.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img2.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img3.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img3.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-img"class="card-img" style="background-image:url(../images/img3.jpg) ;">
+                    <img src="../images/testimg.jpg" alt="">
+                </div>
+                <div class="card-txt">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus!
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

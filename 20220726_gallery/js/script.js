@@ -17,4 +17,11 @@ $(".right").click(function(){
     $(".itemWrap").animate({"left":value},300)
 })
 
+$(".left").click(function(){
+    current--;
+    let value = current * -760;
+    // $(".itemWrap").css("left",current*-760)
+    $(".itemWrap").animate({"left":value},300)
+})
+
 

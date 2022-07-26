@@ -42,14 +42,22 @@
 
     <script>
 
+        // $(".tab li").click(function(){
+        //     let i = $(this).index();
+        //     $(".tab li").removeClass("active");
+        //     $(this).addClass("active");
+
+        //     $(".content ul").stop().animate({left:-i*400},300)
+
+
+        // })
+
         $(".tab li").click(function(){
             let i = $(this).index();
             $(".tab li").removeClass("active");
             $(this).addClass("active");
 
-            $(".content ul").stop().animate({left:-i*400},300)
-
-
+            $(".content ul").stop().animate({left:-i*400})
         })
     </script>
 

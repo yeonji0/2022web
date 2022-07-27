@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for05</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button class="btn">누르세요</button>
+    <button class="btn1">누르세요</button>
+    <div class="Wrap">
+        Lorem, ipsum dolor sit <span>amet</span> amet consectetur adipisicing elit.  <span>amet</span>Nulla vitae eaque excepturi,
+         quibusdam reprehenderit <span>amet</span> vero molestiae harum sapiente <span>amet</span> accusantium voluptatibus?
+    </div>
+    <script>
+        // // init
+        // const btn = document.querySelector(".btn");
+        // const btn1 = document.querySelector(".btn1");
+        // // const span = document.getElementsByTagName("span")[0];
+        // const span = document.querySelectorAll("span");
+
+        // //event
+        // btn.addEventListener("click",btnClick);
+        // btn1.addEventListener("click",btnClick1);
+
+        // //function
+
+        // function btnClick(){
+        //     console.log("ok");
+        //     for(let i=0;i<span.length;i++){
+        //         span[i].style.color = "orchid";
+        //         span[i].style.fontSize = "20px";
+        //     }
+
+        // }
+        // function btnClick1(){
+        //     console.log("ok");
+        //     for(let i=0;i<span.length;i++){
+        //         span[i].style.color = "initial";
+        //         span[i].style.fontSize = "initial";
+        //     }
+
+        $(".btn").click(function(){
+            $("div.Wrap > span")
+            .css({
+                "color":"orchid",
+                "font-size":20
+            })
+        })
+        $(".btn1").click(function(){
+            $("div.Wrap > span")
+            .css({
+                "color":"initial",
+                "font-size":"initial"
+            })
+        })
+
+    </script>
+</body>
+</html>

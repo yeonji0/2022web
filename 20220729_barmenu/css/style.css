@@ -1,0 +1,81 @@
+@charset "utf-8";
+/********** css responsive init**********/
+.container{width: 1200px;margin: 0 auto;}
+h1{text-align: center; margin-bottom: 10px;}
+.navbar{position: relative;}
+.navbar ul{display: flex; height: 40px;}
+.navbar ul li{
+    flex: 1 1 auto;
+    position: relative;
+}
+.navbar ul li a{ 
+    height: 100%;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+.navbar ul li:after{
+    content: ""; display: block;
+    width: 8px;height: 8px;
+    background:red;
+    border-radius: 4px;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.navbar ul li:hover:after{opacity: 1;transition: .3s;}
+
+.bar{
+    position: absolute;
+    width: calc( 100% / 5 );height: 3px;
+    background: red;
+    bottom: 0; 
+    left: 0;
+    transition: .3s;
+}
+
+.visual{ 
+    height: 200px; background: orange;
+    display: flex;justify-content: center;align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** css responsive **********/
+@media (max-width: 1399px) {
+    
+}
+
+@media (max-width: 1199px) {
+    
+}
+
+@media (max-width: 991px) {
+    
+}
+
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 575px) {
+    
+}

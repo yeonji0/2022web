@@ -9,57 +9,113 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-        .tab{display: flex;width: 500px;height: 50px;}
-        .tab li{
-           flex: 1 auto;
-           display: flex; justify-content: center;align-items: center;
+        html,body{height: 100%;}
+        .container{width: 1200px;margin: 0 auto;}
+        .logo{display: flex; justify-content: center;align-items: center; height: 100px;font-size: 30px;}
+        .menu{display: flex; justify-content:space-between;height: 50px;}
+        .menu li{width: 100%; height: 100%;
+            text-align: center; line-height: 50px;
+            cursor: pointer;
         }
-        .tab li.active{background: pink;}
+        .menu li.active{background: pink;}
+        .menu li a{display: block; width: 100%;}
 
-        .content{width: 400px; overflow: hidden;}
-        .contnet img{width: 400px;}
-        .content ul{
-            width: 1200px; position: relative;
-            display: flex;
-            transition: 0.3s;
-
+        .content{width: 1000px;overflow: hidden;}
+        .content img{width: 1000px;}
+        .content ul{width: 3000px; display: flex;
+            position: relative;
         }
+        
+        .subWrap{
+            background: skyblue;
+            padding: 10px; position: relative;display: none;z-index: 1;
+        }
+
+
+      
     </style>
 </head>
 <body>
-    <ul class="tab">
-        <li class="active">tab1</li>
-        <li>tab2</li>
-        <li>tab3</li>
-    </ul>
-    <div class="content">
-        <ul>
-            <li><img src="../../images/pc01.jpg" alt=""></li>
-            <li><img src="../../images/pc02.jpg" alt=""></li>
-            <li><img src="../../images/pc03.jpg" alt=""></li>
+
+    <div class="container">
+        <div class="logo">LOGO</div>
+        <ul class="menu">
+            <li class="active"><a href="">menu1</a>
+                <ul class="subWrap active">
+                    <li><a href="">sub_01</a></li>
+                    <li><a href="">sub_02</a></li>
+                    <li><a href="">sub_03</a></li>
+                    <li><a href="">sub_04</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+                <ul class="subWrap">
+                    <li><a href="">sub_01</a></li>
+                    <li><a href="">sub_02</a></li>
+                    <li><a href="">sub_03</a></li>
+                    <li><a href="">sub_04</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a>
+                <ul class="subWrap">
+                    <li><a href="">sub_01</a></li>
+                    <li><a href="">sub_02</a></li>
+                    <li><a href="">sub_03</a></li>
+                    <li><a href="">sub_04</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu4</a>
+                <ul class="subWrap">
+                    <li><a href="">sub_01</a></li>
+                    <li><a href="">sub_02</a></li>
+                    <li><a href="">sub_03</a></li>
+                    <li><a href="">sub_04</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
+    <div class="content container">
+        <ul>
+            <li><img src="../../images/images01.jpg" alt=""></li>
+            <li><img src="../../images/images02.jpg" alt=""></li>
+            <li><img src="../../images/images03.jpg" alt=""></li>
+            <li><img src="../../images/images04.jpg" alt=""></li>
+        </ul>
+    </div>
+    
     <script>
-
-        // $(".tab li").click(function(){
-        //     let i = $(this).index();
-        //     $(".tab li").removeClass("active");
-        //     $(this).addClass("active");
-
-        //     $(".content ul").stop().animate({left:-i*400},300)
+        $(".menu>li").click(function(){
 
 
-        // })
-
-        $(".tab li").click(function(){
             let i = $(this).index();
-            $(".tab li").removeClass("active");
+            $(".menu>li").removeClass("active");
             $(this).addClass("active");
 
-            $(".content ul").stop().animate({left:-i*400})
+
+            $(".content>ul").stop().animate({left:-i*1000})
         })
+
+        $(".menu>li>a").click(function(e){
+            e.preventDefault();
+
+            $(".menu>li>a").parent().find(".subWrap").fadeOut();
+            if($(this).hasClass("active")){
+
+            }else{
+                $(this).parent().find(".subWrap").show();
+                $(".menu>li>a").removeClass("active");
+                $(this).addClass("active");
+
+            }
+
+        })
+
+
     </script>
 
+
+
+ 
 </body>
 </html>

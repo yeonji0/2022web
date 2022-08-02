@@ -30,6 +30,7 @@ function nowMenu(menu){
 
 function over(){
    let i = $(this).index();
+   
    let value = i * 240;
    $(".bar").css({left:value,opacity:1})
 }

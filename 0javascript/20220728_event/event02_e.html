@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event02_e</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="div">
+        <button class="btn">클릭</button>
+    </div>
+
+    <a href="http://www.naver.com" onclick="pMove(event)">네이버</a>
+    <a href="javascript:void(0)">네이버</a>
+
+    <script>
+        const btn = document.querySelector(".btn");
+        const div = document.querySelector(".div");
+
+        btn.onclick = funE;
+
+        function funE(e){
+            console.log("ok"+e.type)
+            console.log("current"+e.currentTarget)
+        }
+
+        function pMove(e){
+            e.preventDefault();
+        }
+
+        // btn.addEventListener("click",funE)
+        // $(".btn").click(funE)
+    </script>
+
+
+</body>
+</html>

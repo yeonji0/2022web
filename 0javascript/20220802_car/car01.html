@@ -7,7 +7,7 @@
     <title>car01</title>
     <link rel="stylesheet" href="../../css/reset.css">
     <style>
-        body,html{height: 100%;}
+        html,body{height: 100%;}
         body{
             display: flex;justify-content: center;align-items: center;
             flex-direction: column;
@@ -18,20 +18,20 @@
             position: relative;
         }
         .btnWrap{
-            width: 600px; display: flex; 
+            _background-color: blue;
+            width: 600px;display: flex;
             padding: 10px 0;
         }
-        .btn01{margin-left: auto;margin-right: 5px;}
+        .btn1{margin-left: auto;margin-right: 5px;}
 
         .bar{
             width: 500px;height: 10px;background: red;
-            position: absolute;
-            left: 50px; top: 190px;
+            position: absolute;left:50px;top: 190px;
         }
         .car{
-            position: absolute;
-            left: 50px;top:120px;
+            position: absolute; left:50px;top: 120px;
         }
+        .car.rotate{transform: rotateY(180deg);}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -44,43 +44,62 @@
         </div>
     </div>
     <div class="btnWrap">
-        <button class="btn01">start</button>
-        <button class="btn02">stop</button>
+        <button class="btn1">start</button>
+        <button class="btn2">stop</button>
     </div>
-
     <script>
 
-        // let current = 50;   // start location
-        // let move = 10;       // 0.3s마다 2px move
+        // let current = 50; //star location
+        // let move = 10; // 2px move
+
         // setInterval(function(){
         //     current += move;
         //     $(".car").css("left",current)
         // },300)
 
-        // init
-        const nStart = $(".car").position().left;
-        const nEnd = nStart + $(".bar").width() - $(".car").width() 
+        // init 
+        const nStart = $(".car").position().left; // 50
+        const nEnd = nStart + $(".bar").width() - $(".car").width() // 50 + ( 500 - 120 ) 
         let nStep = 2;
         let current = nStart;
+        let timeId = 0;
+        let move = true;
 
-        // event 
-        setInterval(carMove,30);
 
+        
+        // event
+        //timeId = setInterval(carMove,30);
+        $(".btn1").click(function(){
+            if(move == true){
+               timeId = setInterval(carMove,30)
+               console.log(timeId)
+               move = !move; // false
+            }
+        })
+        $(".btn2").click(function(){
+            clearInterval(timeId)
+            timeId = 0;
+            move = !move;
+        })
+
+        
         // function
         function carMove(){
             current += nStep;
 
-            if(current > nEnd ){
+            if( current > nEnd ){
                nStep = -nStep;
-               $(".car").addClass("rotate")
+               $(".car").addClass("rotate");
             }
-            if(current < nStart){
+            if( current < nStart){
                 nStep = -nStep;
-                $(".car").removeClass("rotate")
+                $(".car").removeClass("rotate");
             }
 
-            $(".car").css("left",current)
+            $(".car").css("left",current);
+
         }
+
 
     </script>
 </body>

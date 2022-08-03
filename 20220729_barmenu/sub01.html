@@ -24,12 +24,63 @@
             <div class="bar"></div>
         </nav>
     </div>
+   
     <div class="subVisual company" style="background-image: url(../images/pc01.jpg);">
         <h2>company</h2>
+    </div>
+
+    <div class="container sub">
+        <ul class="tab">
+            <li class="active">tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+            <li>tab4</li>
+        </ul>
+        <div class="content">
+            <div>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam libero ut tempora illo. Cum temporibus provident quis blanditiis consectetur?</div>
+            <div>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam libero ut tempora illo. Cum temporibus provident quis blanditiis consectetur?</div>
+            <div>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam libero ut tempora illo. Cum temporibus provident quis blanditiis consectetur?</div>
+            <div>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam libero ut tempora illo. Cum temporibus provident quis blanditiis consectetur?</div>
+        </div>
     </div>
 <script src="js/script.js"></script>
 <script>
     nowMenu(0);
+
+
+    let params = new URLSearchParams(location.search);
+    console.log(params.get("submenu"))
+
+    // $(".tab li").click(function(){
+    //     let i = $(this).index();
+    //     (".tab li").removeClass("active");
+    //     $(this).addClass("active");
+
+    //     $(".content div").hide().eq(i).show()
+    // })
+
+    function tab(){
+        $(".tab li").click(function(){
+            let i = $(this).index();
+            $(".tab li").removeClass("active");
+            $(this).addClass("active")
+
+            $(".content div").hide().eq(i).show()
+        })
+    }
+    function views(i){
+        if( i == null){
+            $(".tab li").removeClass("active").eq(i).addClass("active");
+            $(".content div").hide().eq(i).show();
+            
+            tab()
+        }else{
+            tab()
+        }
+
+    }
+    views(params.get("submenu"))
+
 </script>
 </body>
 </html>

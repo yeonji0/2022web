@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist03_obj</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <ul class="listView">
+
+    </ul>
+    <script>
+        let listData = [
+            '오늘의할일1',
+            '오늘의할일2',
+            '오늘의할일3',
+            '오늘의할일4',
+            '오늘의할일5',
+        ]
+
+        let objData = {eng:100,math:90}
+        const listView = document.querySelector(".listView");
+        function view(){
+
+            let viewList = "";
+
+            listData.forEach(function(item,i){
+                console.log("1."+listData[i])
+            })
+ 
+            for(let item of listData){            //array,string 등 문자를 쪼갤때
+                console.log("2."+item)
+            }
+            for(let index in listData){           //object {key:value} [value,value]
+                console.log("3."+listData[index])
+            }
+        
+
+        }
+        view();
+
+    </script>
+
+</body>
+</html>

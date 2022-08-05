@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu_obj</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .menu{width: 1000px; margin: 0 auto;}
+        .submenu{display: none;}
+        .menu{display: flex; height: 40px;}
+        .menu>li{flex:  1 1 25%;}
+        .menu>li:hover{background: lightgray;}
+        .menu>li>a{
+            display: flex;height: 100%;display: flex;
+            justify-content: center; align-items: center;
+        }
+        .menu>li:nth-child(2) .submenu{display: block;}
+        .submenu li {height: 40px; background: lightgray;}
+        .submenu li a{height: 100%; display: flex;justify-content: center;align-items: center;}
+
+    </style>
+</head>
+<body>
+    <ul class="menu">
+
+    </ul>
+
+    <script>
+       const menuData = [
+            {
+                menu:"company",
+                href:"#1",
+                sub:null
+            },
+            {
+                menu:"product",
+                href:"#2",
+                sub:[
+                    {
+                        smenu:"pro1",
+                        href:"#pro1"
+                    },
+                    {
+                        smenu:"pro2",
+                        href:"#pro2"
+                    }
+                ]
+            },
+            {
+                menu:"community",
+                href:"#3",
+                sub:[
+                    {
+                        smenu:"com1",
+                        href:"#com1"
+                    },
+                    {
+                        smenu:"com2",
+                        href:"#com2"
+                    }
+                ]
+            },
+            {
+                menu:"board",
+                href:"#4",
+                sub:[
+                    {
+                        smenu:"board1",
+                        href:"#board1"
+                    },
+                    {
+                        smenu:"board2",
+                        href:"#board2"
+                    }
+                ]
+            },
+            {
+                menu:"online",
+                href:"#4",
+                sub:[
+                    {
+                        smenu:"board1",
+                        href:"#board1"
+                    },
+                    {
+                        smenu:"board2",
+                        href:"#board2"
+                    }
+                ]
+            }
+            
+        ]
+
+        let menuLi = document.querySelector(".menu");
+
+        let listView = '';
+        menuData.forEach(function(item,index){
+            //console.log(item.menu)
+            //console.log(menuData[index].menu)
+            //console.log(menuData[index]["menu"])
+
+            // listView += `<li>
+            //                  <a href="${item.href}">${item.menu}</a>`
+
+            // listView += `</li>`
+            listView += `<li>`
+            listView += `    <a href="${item.href}">${item.menu}</a>`
+
+            if( item.sub != null){
+                listView += `<ul class="submenu">`
+
+                item.sub.forEach(function(itemSub){
+                    listView += `<li>`
+                    listView += `<a href="${itemSub.href}">${itemSub.smenu}</a>`
+                    listView += `</li>`
+                })
+
+                listView += `</ul>`
+            }
+            
+            listView += `</li>`
+
+
+        })
+        menuLi.innerHTML = listView;
+    </script>
+
+</body>
+</html>

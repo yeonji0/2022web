@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist03_obj02</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <ul class="viewData">
+
+    </ul>
+<script>
+    let listData = [
+        {
+            todo:"오늘의 할일1",
+            done:false,
+        },
+        {
+            todo:"오늘의 할일2",
+            done:false,
+        },
+        {
+            todo:"오늘의 할일3",
+            done:false,
+        }
+    ];
+
+    const viewData = document.querySelector(".viewData");
+    
+    function view(){
+
+        let viewList = "";
+
+        // for (let i=0;i<listData.length;i++){
+        //     console.log(listData[i].todo)
+        // }
+
+        listData.forEach(function(item,i){
+            console.log(listData[i].todo)
+
+  
+            viewList += `<li>${listData[i].todo}</li>`
+            
+        })
+        viewData.innerHTML = viewList;
+
+    }
+    view();
+
+
+  
+    
+</script>
+
+</body>
+</html>

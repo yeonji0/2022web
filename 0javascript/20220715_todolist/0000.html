@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .viewData{width: 400px; margin: 0 auto;}
+        .viewData li{ 
+            position: relative; height: 40px;
+            display: flex;
+        }
+
+        .inpWrap{width: 400px; margin: 0 auto;}
+    </style>
 </head>
 <body>
+    <div class="inpWrap">
+        <input type="text" class="inp">
+        <button class="btn1">오늘의 할일</button>
+    </div>
     <ul class="viewData">
+       
 
     </ul>
 <script>
@@ -19,36 +33,44 @@
             todo:"오늘의 할일1",
             done:false,
         },
-        {
-            todo:"오늘의 할일2",
-            done:false,
-        },
-        {
-            todo:"오늘의 할일3",
-            done:false,
-        }
-    ]
+    ];
 
-    const viewData = document.querySelector(".viewData");
+    view();
 
     function view(){
-        let viewList = "";
-
-        for( i=0;i<listData.length;i++){
-            
+        if(localStorage.length > 0){
+            let loaclData = localStorage.getItem("todoData");
+            listData = JSON.parse(localData)
         }
-
-        listData.forEach(function(item,i){
-            console.log(listData[i].todo)
-
-            viewList += `<li>${listData[i].todo}</li>`
-
-        })
-
-        
-
     }
-    view();
+
+    todoData = '';
+    listData.forEach(function(itme,i){
+        console.log(listData[i]["todo"])
+
+        todoData +=  `<li>`
+            if(item.done == true){
+                todoData +=   ` <div class="txt" onclick="done(${i})">${listData[i][todo]}</div>`
+            }
+            
+            todoData +=  ` <div class="iconWrap">`
+                todoData +=  ` todoData +=      <a href="#" onclick="">del</a>`
+                todoData +=     `   <a href="#" onclick="">c</a>`
+                todoData +=  `      <a href="#" onclick="">done</a>`
+                todoData += `    </div>
+        </li>`
+
+        view();
+    })
+
+
+
+
+
+
+
+
+    
 </script>
 
 </body>

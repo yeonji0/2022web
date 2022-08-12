@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-gray fixed-top">
@@ -71,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="container py-5 cont-1st">
+    <div class="container py-5 cont-1st  lazy-load">
         <h2 class="text-center">gallery</h2>
         <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, optio!</p>
         <div class="row">
@@ -116,7 +117,7 @@
         </div>
     </div>
 
-    <div class="container py-5 cont-2st">
+    <div class="container py-5 cont-2st lazy-load">
         <h2 class="text-center">PORTFOLIO</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptatem.</p>
         <div class="btn-gruop">
@@ -130,10 +131,12 @@
         </div>
         <div class="row view">
             <div class="col-6 col-lg-3 element-item web mb-3">
-                <img src="images/servicos/1.jpg" alt="" class="img-fluid rounded">
+                <a href="images/servicos/1.jpg" class="vPopup">
+                    <img src="images/servicos/1.jpg" alt="" class="img-fluid rounded">
+                </a>
             </div>
             <div class="col-6 col-lg-3 element-item photo mb-3">
-                <img src="images/servicos/2.jpg" alt="" class="img-fluid rounded">
+                <a href="images/servicos/2.jpg" class="vPopup"><img src="images/servicos/2.jpg" alt="" class="img-fluid rounded"></a> 
             </div>
             <div class="col-6 col-lg-3 element-item web mb-3">
                 <img src="images/servicos/3.jpg" alt="" class="img-fluid rounded">
@@ -158,7 +161,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-gray cont-3st py-5">
+    <div class="bg-gray cont-3st py-5  lazy-load">
         <div class="container">
             <h2 class="text-center mb-3">CUSTOMER</h2>
             <p class="text-center mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, veniam.</p>
@@ -178,7 +181,7 @@
 
         </div>
     </div>
-    <div class="container py-5">
+    <div class="container py-5 cont-4st lazy-load">
         <div class="owl-carousel owl-theme " id="oslide2">
             <img src="images/servicos/1.jpg" alt="">
             <img src="images/servicos/1.jpg" alt="">

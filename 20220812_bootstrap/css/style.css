@@ -22,9 +22,22 @@ a:link,a:visited{text-decoration: none; color: var(--font-color1);}
     width: 100%;
     object-fit: fill;
     border-radius: 5px;
-    box-shadow: var(--shadow-color1);
-    
+    box-shadow: var(--shadow-color1);    
 }
+.banner1 > .row > div{cursor: pointer;}
+.banner1 .card{
+    box-shadow: var(--shadow-color2); 
+    border: 0 none;
+ }
+ .adven .img1st{top: 0;right: 0;box-shadow: var(--shadow-color2);}
+ .adven .img2st{bottom: 0;box-shadow: var(--shadow-color2);}
+ .adven .imgView{height: 400px; }
+ .adven .icon{
+    width: 80px; height: 80px; border-radius: 50%;
+    box-shadow: var(--shadow-color2);
+}
+.adven .img3st{width: 500px;bottom: 0;box-shadow: var(--shadow-color2);}
+.adven .img4st{width: 300px;bottom: 0;box-shadow: var(--shadow-color2);}
 
 @media (max-width:700px) {
     .navbar-nav .nav-item a{color: black !important;}
@@ -39,3 +52,4 @@ a:link,a:visited{text-decoration: none; color: var(--font-color1);}
 .banner a{
     color: var(--font-color2);
 }
+

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 a:link,a:visited{text-decoration: none; color: var(--font-color1);}
+li{list-style:none}
 :root{
     --font-color1:#333;
     --font-color2:#fff;
@@ -39,17 +40,19 @@ a:link,a:visited{text-decoration: none; color: var(--font-color1);}
 .adven .img3st{width: 500px;bottom: 0;box-shadow: var(--shadow-color2);}
 .adven .img4st{width: 300px;bottom: 0;box-shadow: var(--shadow-color2);}
 
+.contact{
+    background: url(../images/contact-cover.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.footer{background: #eee;}
 @media (max-width:700px) {
-    .navbar-nav .nav-item a{color: black !important;}
-
-    
-}
-.video .txtWrap{
-    bottom: 10px;left: 30px;
-}
+.navbar-nav .nav-item a{color: black !important;}
+.video .txtWrap{ bottom: 10px;left: 30px;}
 .banner{box-shadow: var(--shadow-color2);}
 .banner img{width: 30%;}
-.banner a{
-    color: var(--font-color2);
+.banner a{ color: var(--font-color2);}
+    
 }
+
 

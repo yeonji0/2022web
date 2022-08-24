@@ -3,6 +3,7 @@ html,body{height: 100%;}
     margin: 0 auto; padding: 0;
     list-style: none;
     color: #333;
+    box-sizing: border-box;
 }
 a{color: inherit; text-decoration: none;}
 a:visited,a:link{text-decoration: none;}
@@ -10,3 +11,18 @@ header{
     width: 1200px;
     display: flex;
 }
+img{display: block;}
+.container{width: 1200px; margin: 0 auto;}
+
+header{height: 100px;align-items: center;}
+header h1{width: 150px;height: 40px;}
+header nav{width: 500px; margin-left: auto;}
+header nav>ul{display: flex;justify-content: center; align-items: center;}
+header nav>ul li{width: 100%;}
+header ul a{
+    width: 100%;
+    display: block;
+    text-align: center;background: pink;
+}
+
+.submenu{display: none;}

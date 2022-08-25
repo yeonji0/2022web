@@ -40,3 +40,12 @@
     transform: translateY(-50%);
 }
 .mylatest .content li:last-child:after{display: none;}
+
+.sec01{width: 1200px; margin: 0 auto;}
+.titleWrap{display: flex;}
+.contentWrap{
+    display: flex;
+    flex: 1 1 auto;
+
+}
+

@@ -14,15 +14,16 @@ header{
 img{display: block;}
 .container{width: 1200px; margin: 0 auto;}
 
-header{height: 100px;align-items: center;}
-header h1{width: 150px;height: 40px;}
-header nav{width: 500px; margin-left: auto;}
-header nav>ul{display: flex;justify-content: center; align-items: center;}
-header nav>ul li{width: 100%;}
-header ul a{
-    width: 100%;
-    display: block;
-    text-align: center;background: pink;
-}
+header{height: 100px; display: flex;align-items: center;}
+header h1{width: 150px;height: 40px;display: block;}
+header nav{width: 600px;margin-left: auto;}
+header nav>ul{display: flex;}
+header nav>ul>a{display: block;width: calc(100%/4); text-align: center;padding: 10px;}
 
-.submenu{display: none;}
+.menuWrap{position: relative;}
+.menuWrap>a{}
+.submenu{poa}
+
+.slideContainer{width: 1200px;height: 500px; overflow: hidden;}
+.slide{position: relative;}
+.slide p{position: absolute;background: white;}

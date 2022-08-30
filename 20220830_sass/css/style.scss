@@ -1,0 +1,53 @@
+$han:green;
+$font-size:3em;
+$p-font-color:#333;
+
+li{list-style: none;}
+a:link,a:visited{text-decoration: none; color: $p-font-color;}
+
+h2{
+    font-size: 2$font-size;
+    color: red;
+    background: $han;
+}
+
+.nav{
+    width: 500px;
+    margin: 0 auto;
+    li{
+        height: 40px; float: left;
+        a{
+            display: block;line-height: 40px;
+        }
+        &:hover{background: skyblue;}
+        &.active{
+            background: orange;
+        }    
+    }
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+%btn{
+    width: 100px;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    line-height: 40px;text-align: center;
+    &:hover{background: black;}
+}
+.btn-blue{
+    @extend %btn;
+    background: blue;
+}
+.btn-red{
+    @extend %btn;
+    background:red;
+}
+.btn-green{
+    @extend %btn;
+    background:green;
+}

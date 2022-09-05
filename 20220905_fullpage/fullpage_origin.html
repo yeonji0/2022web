@@ -6,13 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fullpage_origin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./fullpage/css/fullpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./fullpage/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./fullpage/js/jquery.fullPage.js"></script>
 </head>
 <body>
+<div class="navTop px-4">
+    <h1><a href="#">LOGO</a></h1>
+    <nav class="gnb">
+        <ul>
+            <li data-menuanchor="m1st"><a href="#m1st">memu1</a></li>
+            <li data-menuanchor="m2st"><a href="#m2st">memu2</a></li>
+            <li data-menuanchor="m3st"><a href="#m3st">memu3</a></li>
+            <li data-menuanchor="m4st"><a href="#m4st">memu4</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="fullpage">
+    <!-- section #1 -->
+    <div class="section page1 bg-info" data-anchor="m1st">
+        <div class="wrap bg-success">
+            <div class="container text-center">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+    </div>
+    <!-- section #2 -->
+    <div class="section page2 bg-primary" data-anchor="m2st">
+        <div class="container text-center bg-success">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+    <!-- section #3 -->
+    <div class="section page3" data-anchor="m3st">
+        <div class="container text-center bg-success">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+    <!-- section #4 -->
+    <div class="section page4 bg-primary" data-anchor="m4st">
+        <div class="container text-center bg-success">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fullpage_origin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./fullpage/css/fullpage.css">
+    <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./fullpage/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./fullpage/js/jquery.fullPage.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
 </head>
 <body>
 <div class="navTop px-4">
@@ -26,28 +26,39 @@
 </div>
 <div id="fullpage">
     <!-- section #1 -->
-    <div class="section page1 bg-info" data-anchor="m1st">
-        <div class="wrap bg-success">
-            <div class="container text-center">
+    <div class="section page1" data-anchor="m1st">
+        <div class="wrap">
+            <div class="container text-center bg-primary txtWrap">
                 Lorem ipsum dolor sit amet.
             </div>
+        </div>
+        <div class="scrollBtn">
+            <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
         </div>
     </div>
     <!-- section #2 -->
     <div class="section page2 bg-primary" data-anchor="m2st">
-        <div class="container text-center bg-success">
+        <div class="container text-center bg-success txtWrap">
             Lorem ipsum dolor sit amet.
         </div>
     </div>
     <!-- section #3 -->
     <div class="section page3" data-anchor="m3st">
-        <div class="container text-center bg-success">
-            Lorem ipsum dolor sit amet.
+        <div class="wrap">
+            <div class="txt1"><h2>남들에게 좋다는데, 나한테는 맞지 않네?</h2></div>
+            <div class="txt2 text-center">
+                <h2>환경에 따라 변하는 나</h2>
+                <h2>진짜 내 타입이 뭐지?</h2>
+            </div>
+            <div class="txt3 text-center">
+                <h2>많은 정보와 광고 속,</h2>
+                <h2>나를 위한게 뭘까?</h2>
+            </div>
         </div>
     </div>
     <!-- section #4 -->
     <div class="section page4 bg-primary" data-anchor="m4st">
-        <div class="container text-center bg-success">
+        <div class="container text-center bg-success txtWrap">
             Lorem ipsum dolor sit amet.
         </div>
     </div>

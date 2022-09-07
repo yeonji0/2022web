@@ -124,6 +124,14 @@ h2{font-size: 3em; color: $fcolor2;text-shadow: $shadow1;}
             opacity: 1;
         }
     }
+    #myVideo{
+        position: absolute;
+        width: 100%;height: 100%;
+        object-fit: cover;
+        left: 50%; top: 50%;
+        transform: translate(-50%,-50%);
+
+    }
 }
 
 .page2{
@@ -143,6 +151,7 @@ h2{font-size: 3em; color: $fcolor2;text-shadow: $shadow1;}
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     &.page1{
         background-image: url(../images/bg1.jpg);
         .scrollBtn{
@@ -164,5 +173,7 @@ h2{font-size: 3em; color: $fcolor2;text-shadow: $shadow1;}
     }
     &.page4{
         background-image: url(../images/bg4.jpg);
+        // .fp-tableCell{vertical-align: top;}
+        .container{transform: translateY(-200px);}
     }
 }

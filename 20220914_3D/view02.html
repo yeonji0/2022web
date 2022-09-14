@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view02</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        html,body{height: 100%;}
+        body{
+            display: flex;justify-content: center;align-items: center;
+            perspective: 500px;
+        }
+        *{margin: 0;padding: 0;}
+        .cardWrap{
+            width: 150px;height: 200px;
+            transform-style: preserve-3d;
+        }
+        .card{
+            width: 150px;height: 200px;
+            position: relative;
+            transform: rotateY(0);
+            transform-style: preserve-3d;
+            transition: 1s;
+        }
+        .card div{
+            width: 100%;height: 100%;
+            display: flex;justify-content: center;align-items: center;
+            position: absolute;
+            overflow: hidden;
+            backface-visibility: hidden;
+            border-radius: 5px;
+            transform-style: preserve-3d;
+        }
+        .card .front{
+            background: skyblue;
+            z-index: 1;
+        }
+        .card .back{
+            background: pink;
+            transform: rotateY(180deg);
+        }
+
+        .cardWrap:hover .card{
+            transform: rotateY(180deg);
+        }
+        .front h1{
+            transform: translate3d(0,0,10px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cardWrap">
+        <div class="card">
+            <div class="front"><h1>앞</h1></div>
+            <div class="back">뒤</div>
+        </div>
+    </div>
+
+</body>
+</html>

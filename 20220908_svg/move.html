@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ddd;
+        }
+
+        
+        .wrap {
+            width: 200px;
+            height: 500px;
+            position: relative;
+            background: skyblue;
+        }
+        
+        .body {
+            position: absolute;
+            left: 40px;
+        }
+        .arm1 {
+            position: absolute;
+            top: 101px; left: 9px;
+            width: 114px;
+            height: 197px;
+            transform-origin: 80px 15px;
+            transform: rotate(335deg);
+            animation: a1Ani 0.5s alternate infinite linear;
+        }
+        .arm2 {
+            position: absolute;
+            top: 101px; left: 9px;
+            width: 114px;
+            height: 197px;
+            transform-origin: 80px 15px;
+            transform: rotate(335deg);
+            animation: a2Ani 0.5s alternate infinite linear;
+            animation-delay: 0.5s;
+        }
+        .leg1{
+            position: absolute;
+            top: 198px;left: 43px;
+            width: 113px;height: 346px;
+            transform-origin: 35px 41px;
+            transform: rotate(-20deg);
+        }
+        .leg2{
+            position: absolute;
+            top: 198px;left: 31px;
+            width: 113px;height: 346px;
+            transform-origin: 35px 41px;
+            transform: rotate(3deg);
+        }
+        .wrap{
+            transform: translate(0,0);
+            animation: wAni 0.3s alternate infinite;
+        }
+
+        @keyframes  wAni {
+            100%{transform: translate(0,10px) ;}
+            
+        }
+
+        @keyframes a1Ani {
+            to{
+                transform: rotate(290deg);
+            }
+        }
+        @keyframes a2Ani {
+            to{
+                transform: rotate(290deg);
+            }
+        }
+        </style>
+</head>
+
+<body>
+
+    <div class="wAni">
+        <div class="wrap">
+            <div class="arm2">
+                <img src="img/arm.png" alt="">
+            </div>
+         
+            <div class="body">
+                <img src="img/body.png" alt="">
+            </div>
+            <div class="leg2">
+                <img src="img/leg.png" alt="">
+            </div>
+            <div class="leg1">
+                <img src="img/leg.png" alt="">
+            </div>
+            <div class="arm1">
+                <img src="img/arm.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

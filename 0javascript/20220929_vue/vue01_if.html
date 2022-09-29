@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{height: 100%;}
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        ul,li{list-style: none;}
+        .tab{
+            display: flex;
+            gap: 10px;
+        }
+        .tab li{
+            width: 100px;
+            height: 40px;
+            display: flex; justify-content: center;align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .tab li.active{
+            background: pink;
+        }
+        .tab li:hover{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <ul class="tab">
+            <li @click="tab=1" v-bind:class="{active:tab==1}">tab1</li>
+            <li @click="tab=2" v-bind:class="{active:tab==2}">tab2</li>
+            <li @click="tab=3" v-bind:class="{active:tab==3}">tab3</li>
+        </ul>
+        <div class="content">
+            <div v-if="tab==1">
+                1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, asperiores?
+            </div>
+            <div v-if="tab==2">
+                2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, asperiores?
+            </div>
+            <div v-if="tab==3">
+                3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, asperiores?
+            </div>
+        </div>
+        {{tab}}
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const TapView = {
+            data(){
+                return{
+                    tab:1,
+                    active:"on"
+                }
+            }
+        }
+
+        
+        Vue.createApp(TapView).mount("#app")
+    </script>
+</body>
+</html>

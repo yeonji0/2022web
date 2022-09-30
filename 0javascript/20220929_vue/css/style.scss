@@ -1,0 +1,46 @@
+
+.slideWrap{
+    background-color: #f7f8f9;
+    padding: 80px 0;
+}
+.slide{
+    >h3{font-size: 44px;}
+    .tabWrap{
+        display: flex;
+        justify-content: end;
+        margin-bottom: 30px;
+        ul{
+            height: 40px;
+            display: flex; gap: 20px;
+        }
+        li{
+            height: 100%;
+            display: flex;justify-content: center; align-items: center;
+            padding: 0 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        li:hover,li.active{
+            background-color: #ccc;
+        }
+    }
+    .item{
+        .img{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 60%;
+        }
+    }
+    .txtWrap{
+        height: 200px;
+        padding: 30px 20px;
+        background: #efefef;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .date{
+            align-self: end;
+        }
+    }
+}

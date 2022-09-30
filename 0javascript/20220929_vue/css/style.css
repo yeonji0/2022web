@@ -1,0 +1,47 @@
+.slideWrap {
+  background-color: #f7f8f9;
+  padding: 80px 0;
+}
+
+.slide > h3 {
+  font-size: 44px;
+}
+.slide .tabWrap {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+}
+.slide .tabWrap ul {
+  height: 40px;
+  display: flex;
+  gap: 20px;
+}
+.slide .tabWrap li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.slide .tabWrap li:hover, .slide .tabWrap li.active {
+  background-color: #ccc;
+}
+.slide .item .img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 60%;
+}
+.slide .txtWrap {
+  height: 200px;
+  padding: 30px 20px;
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.slide .txtWrap .date {
+  align-self: end;
+}/*# sourceMappingURL=style.css.map */
